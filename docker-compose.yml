@@ -1,0 +1,9 @@
+services:
+  php-fpm:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    container_name: intelogis-php
+    volumes:
+      - ./:/app
+    working_dir: /app
